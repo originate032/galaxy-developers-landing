@@ -34,7 +34,7 @@ const About = () => {
             Кто мы такие?
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            FORGE — это не агентство. Это <span className="text-accent font-semibold">завод производства</span> кодовых решений нового поколения.
+            Galaxy Developers — это не агентство. Это <span className="text-accent font-semibold">завод производства</span> кодовых решений нового поколения.
           </p>
         </div>
 
@@ -72,7 +72,7 @@ const About = () => {
               "Мы не пишем код. Мы <span className="text-accent">производим решения</span>."
             </p>
             <footer className="text-muted-foreground">
-              — Альберт и Паша, основатели FORGE
+              — Альберт и Паша, основатели Galaxy Developers
             </footer>
           </blockquote>
         </div>
