@@ -65,7 +65,7 @@ const Projects = () => {
   ];
 
   return (
-    <section className="py-24 px-4 relative overflow-hidden">
+    <section id="projects" className="py-24 px-4 relative overflow-hidden">
       {/* Background Decoration */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/20 to-background" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/5 rounded-full blur-3xl" />

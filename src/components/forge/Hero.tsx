@@ -7,6 +7,8 @@ const Hero = () => {
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-hero opacity-20" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(260_85%_65%_/_0.1),transparent_50%)]" />
+      <div className="absolute inset-0 texture-grid opacity-30" />
+      <div className="absolute inset-0 texture-noise" />
       
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="text-center space-y-8 animate-fade-in">
@@ -20,7 +22,7 @@ const Hero = () => {
 
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
-            <span className="bg-gradient-accent bg-clip-text text-transparent">
+            <span className="bg-gradient-accent bg-clip-text text-transparent glow-text">
               Galaxy Developers
             </span>
             <br />
@@ -59,6 +61,9 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <Button 
               size="lg" 
+              onClick={() => {
+                document.querySelector('#contact-form')?.scrollIntoView({ behavior: 'smooth' });
+              }}
               className="bg-primary hover:bg-primary-glow text-primary-foreground shadow-glow transition-all duration-300 hover:scale-105"
             >
               Начать проект
@@ -67,6 +72,9 @@ const Hero = () => {
             <Button 
               size="lg" 
               variant="outline"
+              onClick={() => {
+                document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
+              }}
               className="border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300"
             >
               Посмотреть кейсы

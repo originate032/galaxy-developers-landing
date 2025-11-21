@@ -61,7 +61,7 @@ ${formData.message}`;
   };
 
   return (
-    <section className="py-24 px-4 relative overflow-hidden">
+    <section id="contact-form" className="py-24 px-4 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-hero opacity-10" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/20 rounded-full blur-3xl" />
