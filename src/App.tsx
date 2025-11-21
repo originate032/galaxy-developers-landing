@@ -1,0 +1,39 @@
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Index from "./pages/Index";
+import NotFound from "./pages/NotFound";
+import WorldSaverPortal from "./pages/projects/WorldSaverPortal";
+import FindGoodGirl from "./pages/projects/FindGoodGirl";
+import EcoRider from "./pages/projects/EcoRider";
+import RazvitieBot from "./pages/projects/RazvitieBot";
+import OsakaSushiBar from "./pages/projects/OsakaSushiBar";
+import TelegramSalesBot from "./pages/projects/TelegramSalesBot";
+
+const queryClient = new QueryClient();
+
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/projects/world-saver-portal" element={<WorldSaverPortal />} />
+          <Route path="/projects/find-good-girl" element={<FindGoodGirl />} />
+          <Route path="/projects/eco-rider" element={<EcoRider />} />
+          <Route path="/projects/razvitie-bot" element={<RazvitieBot />} />
+          <Route path="/projects/osaka-sushi-bar" element={<OsakaSushiBar />} />
+          <Route path="/projects/telegram-sales-bot" element={<TelegramSalesBot />} />
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </TooltipProvider>
+  </QueryClientProvider>
+);
+
+export default App;
