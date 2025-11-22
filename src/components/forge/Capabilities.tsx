@@ -6,42 +6,28 @@ const Capabilities = () => {
       icon: BarChart3,
       title: "Маркетинговый анализ",
       description: "Глубокая аналитика и insights для принятия решений",
-      examples: [
-        { name: "Insight Navigator", url: "#" },
-        { name: "Audience Analytics", url: "#" }
-      ],
+      examples: [],
       color: "accent"
     },
     {
       icon: Smartphone,
       title: "Мобильные лендинги",
       description: "Готовые к интеграции в Telegram Apps",
-      examples: [
-        { name: "Builder Hub", url: "#" }
-      ],
+      examples: [],
       color: "primary"
     },
     {
       icon: Globe,
       title: "Многоязычные решения",
       description: "От вьетнамских ресторанов до spa-центров",
-      examples: [
-        { name: "Nonla Oasis", url: "#" },
-        { name: "Sweet Layout", url: "#" },
-        { name: "Susanin Ride", url: "#" },
-        { name: "Spa Zen", url: "#" }
-      ],
+      examples: [],
       color: "accent-secondary"
     },
     {
       icon: Users,
       title: "Упаковка экспертов",
       description: "Персональные бренды и лендинги специалистов",
-      examples: [
-        { name: "Afeliya Lux", url: "#" },
-        { name: "Rise Academy", url: "#" },
-        { name: "Demo Forgive", url: "#" }
-      ],
+      examples: [],
       color: "accent"
     },
     {
@@ -57,9 +43,7 @@ const Capabilities = () => {
       icon: Network,
       title: "Системное планирование",
       description: "Визуализация архитектуры и процессов",
-      examples: [
-        { name: "BG AI Viz", url: "#" }
-      ],
+      examples: [],
       color: "accent-secondary"
     }
   ];
@@ -97,22 +81,24 @@ const Capabilities = () => {
               </p>
 
               {/* Examples */}
-              <div className="space-y-2">
-                <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
-                  Примеры:
+              {capability.examples.length > 0 && (
+                <div className="space-y-2">
+                  <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
+                    Примеры:
+                  </div>
+                  {capability.examples.map((example, idx) => (
+                    <a
+                      key={idx}
+                      href={example.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-sm text-accent hover:text-accent-secondary transition-colors duration-200 hover:underline"
+                    >
+                      → {example.name}
+                    </a>
+                  ))}
                 </div>
-                {capability.examples.map((example, idx) => (
-                  <a
-                    key={idx}
-                    href={example.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block text-sm text-accent hover:text-accent-secondary transition-colors duration-200 hover:underline"
-                  >
-                    → {example.name}
-                  </a>
-                ))}
-              </div>
+              )}
 
               {/* Hover Effect */}
               <div className="absolute inset-0 rounded-2xl bg-gradient-accent opacity-0 group-hover:opacity-5 transition-opacity duration-300 pointer-events-none" />
